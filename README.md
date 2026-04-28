@@ -1,5 +1,5 @@
 
-# Dağıtık Önbellek ve Serileştirme Performans Analizi 🚀
+# Dağıtık Önbellek ve Serileştirme Performans Analizi
 
 Bu proje, yüksek trafikli .NET 8 web uygulamalarında **Redis** dağıtık önbellek katmanı üzerinde kullanılan farklı serileştirme (serialization) yöntemlerinin performansını ölçmek ve karşılaştırmak amacıyla geliştirilmiştir.
 
