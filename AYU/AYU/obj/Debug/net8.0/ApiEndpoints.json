@@ -1,0 +1,62 @@
+[
+  {
+    "ContainingType": "AYU.Controllers.PerformanceTestController",
+    "Method": "GetFromSql",
+    "RelativePath": "api/PerformanceTest/scenario1-sql",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AYU.Controllers.PerformanceTestController",
+    "Method": "GetFromRedisJson",
+    "RelativePath": "api/PerformanceTest/scenario2-redis-json",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AYU.Controllers.PerformanceTestController",
+    "Method": "GetFromRedisMsgPack",
+    "RelativePath": "api/PerformanceTest/scenario3-redis-msgpack",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AYU.Controllers.PerformanceTestController",
+    "Method": "GetFromRedisProtobuf",
+    "RelativePath": "api/PerformanceTest/scenario4-redis-protobuf",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AYU.Controllers.PerformanceTestController",
+    "Method": "GetFromRedisAvro",
+    "RelativePath": "api/PerformanceTest/scenario5-redis-avro",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AYU.Controllers.PerformanceTestController",
+    "Method": "Seed100kData",
+    "RelativePath": "api/PerformanceTest/seed-100k-data",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

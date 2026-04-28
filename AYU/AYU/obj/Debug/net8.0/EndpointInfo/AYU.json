@@ -1,0 +1,94 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "AYU",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/PerformanceTest/scenario1-sql": {
+      "get": {
+        "tags": [
+          "PerformanceTest"
+        ],
+        "summary": "Senaryo 1: Veritabanından (SQL Server) Doğrudan Okuma (Referans Noktası)",
+        "description": "Bu servis, herhangi bir önbellekleme mekanizması kullanmadan veriyi doğrudan ilişkisel veritabanından çeker. \r\nPerformans testlerinde \"en düşük\" hız referansı (baseline) olarak kabul edilir.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PerformanceTest/scenario2-redis-json": {
+      "get": {
+        "tags": [
+          "PerformanceTest"
+        ],
+        "summary": "Senaryo 2: Redis Üzerinden JSON Formatında Okuma",
+        "description": "Veriyi Redis önbelleğinden metin tabanlı JSON formatında getirir. \r\nJSON, okunabilirlik avantajı sunsa da yüksek trafikli sistemlerde büyük veri setleri için RAM ve CPU maliyeti oluşturmaktadır.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PerformanceTest/scenario3-redis-msgpack": {
+      "get": {
+        "tags": [
+          "PerformanceTest"
+        ],
+        "summary": "Senaryo 3: Redis Üzerinden MessagePack Formatında Okuma",
+        "description": "Veriyi Redis'ten MessagePack formatında getirir. \r\nİkili sıkıştırma sayesinde JSON'a kıyasla daha düşük ağ gecikmesi ve daha az RAM tüketimi hedeflenmektedir.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PerformanceTest/scenario4-redis-protobuf": {
+      "get": {
+        "tags": [
+          "PerformanceTest"
+        ],
+        "summary": "Senaryo 4: Redis Üzerinden gRPC (Protocol Buffers) Formatında Okuma",
+        "description": "Google tarafından geliştirilen Protobuf protokolünü kullanarak veriyi ikili formda okur. \r\ngRPC mimarisinin temelini oluşturan bu yöntem, şemaya dayalı yapısı ile en yüksek hızlardan birini vaat eder.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PerformanceTest/scenario5-redis-avro": {
+      "get": {
+        "tags": [
+          "PerformanceTest"
+        ],
+        "summary": "Senaryo 5: Redis Üzerinden Apache Avro Formatında Okuma",
+        "description": "Büyük veri sistemlerinde standart olan Apache Avro formatını kullanır. \r\nVeriyi şemasıyla birlikte kompakt bir ikili yapıda saklayarak yüksek performanslı serileştirme sağlar.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PerformanceTest/seed-100k-data": {
+      "post": {
+        "tags": [
+          "PerformanceTest"
+        ],
+        "summary": "Veritabanına 100.000 satırlık test verisi ekler.",
+        "description": "Bellek taşmalarını önlemek için veriler 10.000'lik paketler halinde SQL'e yazılır.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}
